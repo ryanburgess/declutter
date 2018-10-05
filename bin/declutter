@@ -11,67 +11,67 @@ fs.readdir(desktop, (err, files) => {
     // get the fyletype
     const fileType = file.split('.')[1];
 
-    // if junk directory doesn't exist create one
-    if (!fs.existsSync(desktop + '/junk')){
-      fs.mkdirSync(desktop + '/junk');
+    // if declutter directory doesn't exist create one
+    if (!fs.existsSync(desktop + '/declutter')){
+      fs.mkdirSync(desktop + '/declutter');
     }
 
     console.log(file)
 
-    if (file !== 'junk') {
-      // move screenshots to junk/screenshots
+    if (file !== 'declutter') {
+      // move screenshots to declutter/screenshots
       if (file.startsWith('Screen Shot')) {
-        // if junk screenshots directory doesn't exist create one
-        if (!fs.existsSync(desktop + '/junk/screenshots')){
-          fs.mkdirSync(desktop + '/junk/screenshots');
+        // if declutter screenshots directory doesn't exist create one
+        if (!fs.existsSync(desktop + '/declutter/screenshots')){
+          fs.mkdirSync(desktop + '/declutter/screenshots');
         }
 
-        // move all screenshots to junk screenshots directory
-        mv(desktop + '/' + file, `${desktop}/junk/screenshots/${file}`, function(err) {
+        // move all screenshots to declutter screenshots directory
+        mv(desktop + '/' + file, `${desktop}/declutter/screenshots/${file}`, function(err) {
           if(err) {
             console.log(err);
           }
         });
       }else if (fileType === 'pdf') {
-        // if junk pdf directory doesn't exist create one
-        if (!fs.existsSync(desktop + '/junk/pdf')){
-          fs.mkdirSync(desktop + '/junk/pdf');
+        // if declutter pdf directory doesn't exist create one
+        if (!fs.existsSync(desktop + '/declutter/pdf')){
+          fs.mkdirSync(desktop + '/declutter/pdf');
         }
 
-        // move all pdfs to junk pdf directory
-        mv(desktop + '/' + file, `${desktop}/junk/pdf/${file}`, function(err) {
+        // move all pdfs to declutter pdf directory
+        mv(desktop + '/' + file, `${desktop}/declutter/pdf/${file}`, function(err) {
           if(err) {
             console.log(err);
           }
         });
       }else if (fileType === 'png' || fileType === 'jpg' || fileType === 'jpeg' || fileType === 'gif' || fileType === 'tif') {
-        // if junk images directory doesn't exist create one
-        if (!fs.existsSync(desktop + '/junk/images')){
-          fs.mkdirSync(desktop + '/junk/images');
+        // if declutter/images directory doesn't exist create one
+        if (!fs.existsSync(desktop + '/declutter/images')){
+          fs.mkdirSync(desktop + '/declutter/images');
         }
 
-        // move all images to junk images directory
-        mv(desktop + '/' + file, `${desktop}/junk/images/${file}`, function(err) {
+        // move all images to declutter/images directory
+        mv(desktop + '/' + file, `${desktop}/declutter/images/${file}`, function(err) {
           if(err) {
             console.log(err);
           }
         });
 
       }else if (fileType === 'MOV' || fileType === 'MP4') {
-        // if junk video directory doesn't exist create one
-        if (!fs.existsSync(desktop + '/junk/video')){
-          fs.mkdirSync(desktop + '/junk/video');
+        // if declutter video directory doesn't exist create one
+        if (!fs.existsSync(desktop + '/declutter/video')){
+          fs.mkdirSync(desktop + '/declutter/video');
         }
 
-        // move all videos to junk video directory
-        mv(desktop + '/' + file, `${desktop}/junk/video/${file}`, function(err) {
+        // move all videos to declutter/video directory
+        mv(desktop + '/' + file, `${desktop}/declutter/video/${file}`, function(err) {
           if(err) {
             console.log(err);
           }
         });
       }else {
-        // move all files junk directory
-        mv(desktop + '/' + file, `${desktop}/junk/${file}`, function(err) {
+        // move all files to declutter directory
+        mv(desktop + '/' + file, `${desktop}/declutter/${file}`, function(err) {
           if(err) {
             console.log(err);
           }
