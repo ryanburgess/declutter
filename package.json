@@ -1,0 +1,36 @@
+{
+  "name": "declutter-desktop",
+  "version": "1.0.0",
+  "description": "A CLI tool to organize your Desktop",
+  "main": "bin/declutter",
+  "dependencies": {
+    "moment": "^2.19.1",
+    "mv": "^2.1.1"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "declutter": "./bin/declutter"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanburgess/declutter.git"
+  },
+  "keywords": [
+    "organize",
+    "photos",
+    "video",
+    "files",
+    "declutter",
+    "desktop"
+  ],
+  "author": "Ryan Burgess",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryanburgess/declutter/issues"
+  },
+  "homepage": "https://github.com/ryanburgess/declutter#readme"
+}
