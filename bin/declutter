@@ -16,8 +16,6 @@ fs.readdir(desktop, (err, files) => {
       fs.mkdirSync(desktop + '/declutter');
     }
 
-    console.log(file)
-
     if (file !== 'declutter') {
       // move screenshots to declutter/screenshots
       if (file.startsWith('Screen Shot')) {

@@ -10,7 +10,7 @@ npm install declutter-desktop -g
 ```
 
 ## Use
-Run the command `declutter-desktop` to clean up the files on your desktop.
+Run the command `declutter` to clean up the files on your desktop.
 
 ## Contributing
 1. Fork it
